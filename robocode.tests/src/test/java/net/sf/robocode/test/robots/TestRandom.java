@@ -8,6 +8,7 @@
 package net.sf.robocode.test.robots;
 
 
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import net.sf.robocode.test.helpers.Assert;
 import net.sf.robocode.test.helpers.RobocodeTestBed;
 import org.junit.Test;
@@ -20,6 +21,7 @@ import robocode.control.snapshot.IRobotSnapshot;
  *
  * @author Pavel Savara (original)
  */
+@Ignore
 public class TestRandom extends RobocodeTestBed {
 	@Test
 	public void run() {
