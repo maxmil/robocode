@@ -11,8 +11,8 @@ package net.sf.robocode.ui.battleview;
 import net.sf.robocode.battle.snapshot.RobotSnapshot;
 import net.sf.robocode.robotpaint.Graphics2DSerialized;
 import net.sf.robocode.robotpaint.IGraphicsProxy;
-import net.sf.robocode.settings.ISettingsManager;
 import net.sf.robocode.settings.ISettingsListener;
+import net.sf.robocode.settings.ISettingsManager;
 import net.sf.robocode.ui.IImageManager;
 import net.sf.robocode.ui.IWindowManager;
 import net.sf.robocode.ui.IWindowManagerExt;
@@ -34,8 +34,9 @@ import java.awt.event.ComponentEvent;
 import java.awt.geom.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-import static java.lang.Math.*;
 import java.util.Random;
+
+import static java.lang.Math.*;
 
 
 /**
@@ -275,6 +276,11 @@ public class BattleView extends Canvas {
 				}
 			}
 		}
+
+		Image centerImage = imageManager.getCenterImage();
+		int centerImageWidth = centerImage.getWidth(null);
+		int centerImageHeight = centerImage.getHeight(null);
+		groundGfx.drawImage(centerImage, (battleField.getWidth() - centerImageWidth) / 2, (battleField.getHeight() - centerImageHeight) / 2, null);
 	}
 
 	private void drawBattle(Graphics2D g, ITurnSnapshot snapShot) {

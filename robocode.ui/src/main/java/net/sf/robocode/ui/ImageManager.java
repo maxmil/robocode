@@ -73,6 +73,10 @@ public class ImageManager implements IImageManager {
 		return groundImages[index];
 	}
 
+	public Image getCenterImage() {
+		return getImage("/net/sf/robocode/ui/images/ground/center_image.png");
+	}
+
 	public RenderImage getExplosionRenderImage(int which, int frame) {
 		if (explosionRenderImages == null) {
 			int numExplosion, numFrame;
