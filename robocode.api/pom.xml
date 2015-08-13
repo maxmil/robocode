@@ -32,6 +32,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 						<goals>
 							<goal>javadoc</goal>
 						</goals>
+						<configuration>
+							<failOnError>false</failOnError>
+						</configuration>
 					</execution>
 				</executions>
 				<configuration>

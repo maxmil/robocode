@@ -36,7 +36,7 @@ public class TestConstructorHttpAttack extends RobocodeTestBed {
 			messagedInitialization = true;	
 		}	
 
-		if (out.contains("access denied (java.net.SocketPermission")) {
+		if (out.contains("access denied (\"java.net.SocketPermission\"")) {
 			messagedAccessDenied = true;	
 		}	
 	}
@@ -49,6 +49,6 @@ public class TestConstructorHttpAttack extends RobocodeTestBed {
 
 	@Override
 	protected int getExpectedErrors() {
-		return 2; // Security error must be reported as an error
+		return 3; // Security error must be reported as an error
 	}
 }
